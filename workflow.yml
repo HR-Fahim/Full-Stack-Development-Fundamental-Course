@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Trigger on pushes to the 'main' branch
 
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          deploy-branch: main
-          skip-publish: false
-          working-dir: .
-          access-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-branch: main  # Specify the branch to deploy to
+          skip-publish: false  # Enable publishing
+          working-dir: .      # Set the working directory
+          access-token: ${{ secrets.GITHUB_TOKEN }}  # Provide the personal access token
