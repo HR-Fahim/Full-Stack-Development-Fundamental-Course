@@ -18,5 +18,5 @@ jobs:
           upstream_repo: https://github.com/fullstack-hy2020/fullstack-hy2020.github.io
           upstream_branch: master
           downstream_branch: master
-          token: ${{ secretes.GITHUB_TOKEN }}
+          token: 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
           
