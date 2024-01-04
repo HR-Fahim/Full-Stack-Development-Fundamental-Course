@@ -1,22 +1,22 @@
-name: Sync Fork
+name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
-  schedule:
-  - cron: "0 13 * * 1"
+  push:
+    branches:
+      - main
 
 jobs:
-  sync:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-      - name: GitHub Sync to Upstream Repository
-        uses: dabreadman/sync-upstream-repo@v1.3.0
-        with: 
-          upstream_repo: https://github.com/fullstack-hy2020/fullstack-hy2020.github.io
-          upstream_branch: master
-          downstream_branch: master
-          token: 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
-          
+      - name: Deploy to GitHub Pages
+        uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          deploy-branch: main
+          skip-publish: false
+          working-dir: .
+          access-token: ${{ secrets.GITHUB_TOKEN }}
