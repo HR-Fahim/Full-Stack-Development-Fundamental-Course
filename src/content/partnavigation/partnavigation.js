@@ -28,12 +28,14 @@ module.exports = {
       b: 'Backendin testaaminen',
       c: 'Käyttäjien hallinta',
       d: 'Token-perustainen kirjautuminen',
+      e: 'Legacy: testaaminen Jestiä käyttäen',
     },
     '5': {
       a: 'Kirjautuminen frontendissä',
       b: 'props.children ja proptypet',
       c: 'React-sovellusten testaaminen',
-      d: 'End to end -testaus',
+      d: 'End to end -testaus: Playwright',
+      e: 'End to end -testaus: Cypress',
     },
     '6': {
       a: 'Flux-arkkitehtuuri ja Redux',
@@ -95,17 +97,19 @@ module.exports = {
       b: 'Testing the backend',
       c: 'User administration',
       d: 'Token authentication',
+      e: 'Legacy: Testing with Jest',
     },
     '5': {
       a: 'Login in frontend',
       b: 'props.children and proptypes',
       c: 'Testing React apps',
-      d: 'End to end testing',
+      d: 'End to end testing: Playwright',
+      e: 'End to end testing: Cypress',
     },
     '6': {
       a: 'Flux-architecture and Redux',
       b: 'Many reducers',
-      c: 'Communicating with server in a redux application',
+      c: 'Communicating with server in a Redux application',
       d: 'React Query, useReducer and the context',
     },
     '7': {
@@ -185,7 +189,7 @@ module.exports = {
       d: '密钥认证',
     },
     '5': {
-      a: '完成前台的登录功能',
+      a: '完成前端的登录功能',
       b: 'props.children 与 proptypes',
       c: '测试React 应用',
       d: '端到端测试',
@@ -261,7 +265,7 @@ module.exports = {
     },
     '3': {
       a: 'Node.js y Express',
-      b: 'Implementación de la aplicación en Internet',
+      b: 'Despliegue de la aplicación a Internet',
       c: 'Guardando datos en MongoDB',
       d: 'Validación y ESLint',
     },
@@ -269,7 +273,7 @@ module.exports = {
       a: 'Estructura de la aplicación backend, introducción a las pruebas',
       b: 'Probando el backend',
       c: 'Administración de usuarios',
-      d: 'Autenticación de token',
+      d: 'Autenticación basada en token',
     },
     '5': {
       a: 'Iniciar sesión en la interfaz',
@@ -282,7 +286,6 @@ module.exports = {
       b: 'Muchos reducers',
       c: 'Comunicarse con el servidor en una aplicación redux',
       d: 'React Query, useReducer y  el contexto',
-      e: 'connect (la parte antigua)',
     },
     '7': {
       a: 'React-router',
@@ -345,7 +348,7 @@ module.exports = {
       a: 'Rendu de collections, modules',
       b: 'Formulaires',
       c: 'Obtenir des données du serveur',
-      d: 'Modification des donées côté serveur',
+      d: 'Modification des données côté serveur',
       e: 'Styliser vos applications React',
     },
     '3': {
@@ -370,7 +373,7 @@ module.exports = {
       a: 'Architecture de flux et Redux',
       b: 'Quelques reducers',
       c: "Communiquer avec le backend dans l'application Redux",
-      d: 'Connect',
+      d: 'React Query, useReducer et le contexte',
     },
     '7': {
       a: 'React-router',

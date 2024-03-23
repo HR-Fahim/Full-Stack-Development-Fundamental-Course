@@ -7,17 +7,17 @@ lang: es
 
 <div class="content">
 
-Ahora comenzaremos a familiarizarnos con probablemente el tema más importante de este curso, es decir, la biblioteca [React](https://es.react.dev/). Comencemos con la creación de una aplicación React simple y con el conocimiento de los conceptos básicos de React.
+Ahora comenzaremos a familiarizarnos con probablemente el tema más importante de este curso, es decir, la librería [React](https://es.react.dev/). Comencemos con la creación de una aplicación React simple y con el conocimiento de los conceptos básicos de React.
 
 La forma más fácil de empezar es utilizando una herramienta llamada [Vite](https://es.vitejs.dev/).
 
-Comencemos creando una aplización llamada <i>part1</i>, navegar a este direcctorio e instalando las librerias:
+Comencemos creando una aplicación llamada <i>part1</i>, navegar a este directorio e instalando las librerias:
 
 ```bash
 # npm 6.x (desactualizado, pero aun en uso por algunos):
 npm create vite@latest part1 --template react
 
-# npm 7+, el doble guión adicional es necesario:
+# npm 7+, el doble guion adicional es necesario:
 npm create vite@latest part1 -- --template react
 ```
 
@@ -34,13 +34,13 @@ npm run dev
 
 La consola indica que la aplicación ha iniciado en localhost, puerto 5173, es decir la dirección <http://localhost:5173/>:
 
-![](../../images/1/1-vite1.png)
+![Captura de pantalla de la consola ejecutando vite en localhost 5173](../../images/1/1-vite1.png)
 
 Vite inicia la aplicación [por defecto](https://es.vitejs.dev/config/server-options.html#server-port) en el puerto 5173. Si este no está libre, Vite utiliza el siguiente numero de puerto libre.
 
 Abre el navegador y un editor de código para que puedas ver el código y el navegador al mismo tiempo en la pantalla:
 
-![](../../images/1/1-vite4.png)
+![Captura de pantalla de la pagina inicial de vite y estructura de archivos en vs code](../../images/1/1-vite4.png)
 
 El código de la aplicación se encuentra en la carpeta <i>src</i>. Simplifiquemos el código predeterminado de tal modo que el archivo main.jsx se vea así:
 
@@ -72,9 +72,7 @@ Los archivos <i>App.css</i> y <i>index.css</i>, y el directorio <i>assets</i> pu
 
 En lugar de Vite, tu puedes usar la vieja herramienta de generación [create-react-app](https://github.com/facebookincubator/create-react-app) en el curso para inicializar aplicaciones. La diferencia más visible es el nombre del archivo de arranque de la aplicación, el cual es <i>index.js</i>.
 
-La manera de iniciar la aplicacieon también es diferente en CRA, en esta se inicia con el comando
-
-Creemos una aplicación llamada <i>part1</i> y naveguemos hasta su directorio.
+La manera de iniciar la aplicación también es diferente en CRA, en esta se inicia con el comando
 
 ```bash
 npm start
@@ -86,7 +84,7 @@ en contraste con Vite
 npm run dev
 ```
 
-El curso actualmente (11 de agosto de 2023) está siendo actualizado para usar Vite. Algunas marcas aun usan la aplicación base creada con create-react-app.
+El curso actualmente (11 de agosto de 2023) está siendo actualizado para usar Vite. Algunas partes aun usan la aplicación base creada con create-react-app.
 
 ### Componente
 
@@ -129,7 +127,7 @@ const App = () => (
 )
 ```
 
-Como probablemente adivinaste, el componente se rendizará como una etiqueta <i>div</i>, que envuelve una etiqueta <i>p</i> que contiene el texto <i>Hello world</i>.
+Como probablemente adivinaste, el componente se renderiza como una etiqueta <i>div</i>, que envuelve una etiqueta <i>p</i> que contiene el texto <i>Hello world</i>.
 
 Técnicamente, el componente se define como una función de JavaScript. La siguiente es una función (que no recibe ningún parámetro):
 
@@ -186,11 +184,11 @@ La primera regla del desarrollo web frontend:
 
 > <i>deja la consola abierta todo el tiempo</i>
 
-Repitados esto juntos: <i>Prometo dejar la consola abierta todo el tiempo</i> durante este curso, y por el resto de mi vida mientras esté haciendo desarrollo web.
+Repitamos esto juntos: <i>Prometo dejar la consola abierta todo el tiempo</i> durante este curso, y por el resto de mi vida mientras esté haciendo desarrollo web.
 
 También es posible renderizar contenido dinámico dentro de un componente.
 
-Modifiqua el componente de la siguiente manera:
+Modifica el componente de la siguiente manera:
 
 ```js
 const App = () => {
@@ -220,11 +218,11 @@ export default App
 
 El export no se muestra en la mayoría de los ejemplos del material de este curso. Sin este export el componente y la aplicación completa se romperían.
 
-¿Reduerdas que prometiste dejar la consola abierta? ¿Qué se imprimió allí?
+¿Recuerdas que prometiste dejar la consola abierta? ¿Qué se imprimió allí?
 
 ### JSX
 
-Parece que los componentes de React están devolviendo marcado HTML. Sin embargo, éste no es el caso. El diseño de los componentes de React se escribe principalmente usando [JSX](https://es.legacy.reactjs.org/docs/introducing-jsx.html). Aunque JSX se parece a HTML, en realidad estamos tratando con una forma de escribir JavaScript. Bajo el capó, el JSX devuelto por los componentes de React se compila en JavaScript. 
+Parece que los componentes de React están devolviendo marcado HTML. Sin embargo, éste no es el caso. El diseño de los componentes de React se escribe principalmente usando [JSX](https://es.react.dev/learn/writing-markup-with-jsx). Aunque JSX se parece a HTML, en realidad estamos tratando con una forma de escribir JavaScript. Bajo el capó, el JSX devuelto por los componentes de React se compila en JavaScript. 
 
 Después de compilar, nuestra aplicación se ve así: 
 
@@ -344,7 +342,7 @@ const App = () => {
 }
 ```
 
-Puede haber un número arbitrario de props y sus valores pueden ser strings "incrustados en el código" ("hard coded") o resultados de expresiones JavaScript. Si el valor del prop se logra usando JavaScript, debe estar envuelto con llaves. 
+Puede haber un número arbitrario de props y sus valores pueden ser strings "incrustados en el código" ("hard coded") o resultados de expresiones JavaScript. Si el valor del prop se obtiene usando JavaScript, debe estar envuelto con llaves. 
 
 Modifiquemos el código para que el componente <i>Hello</i> use dos props: 
 
@@ -376,19 +374,19 @@ const App = () => {
 
 Los props enviados por el componente <i>App</i> son los valores de las variables, el resultado de la evaluación de la expresión de suma y un string regular.
 
-El componente <i>Hello</i> tambien imprime en consola el valor del objeto props.
+El componente <i>Hello</i> también imprime en consola el valor del objeto props.
 
 Yo realmente espero que tu consola esté abierta. Si no es asi, recuerda tu promesa:
 
 > <i>Prometo dejar la consola abierta todo el tiempo</i> durante este curso, y por el resto de mi vida mientras esté haciendo desarrollo web.
 
-EL desarrollo de software es dificil. Este se vuelve aun más dificil si uno no está usando todas las herramientas disponibles como la consola de desarrollo e imprimiendo la depuración con _console.log_. Los profesionales usan amnas <i>todo el tiempo</i> y no hay una sola razón de porque un principiante no debería adoptar estos maravillosos métodos de ayuda que hacen la vida más fácil.
+El desarrollo de software es dificil. Este se vuelve aun más dificil si uno no está usando todas las herramientas disponibles como la consola de desarrollo e imprimiendo la depuración con _console.log_. Los profesionales usan ambas <i>todo el tiempo</i> y no hay una sola razón de porque un principiante no debería adoptar estos maravillosos métodos de ayuda que hacen la vida más fácil.
 
 ### Posible mensaje de error
 
-Dependiendo del editor que estés usando, podrias recibir un mensaje de error en este punto:
+Dependiendo del editor que estés usando, podrías recibir un mensaje de error en este punto:
 
-![](../../images/1/1-vite5.png)
+![Captura de pantalla de vs code mostrando un error de eslint: "name is missing in props validation"](../../images/1/1-vite5.png)
 
 Este realmente no es un error, es una advertencia causada por la herramienta [ESLint](https://es.eslint.org/). Tu puedes silenciar la advertencia [react/prop-types](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md) añadiendo la siguiente línea al archivo <i>.eslintrc.cjs</i>
 
@@ -424,7 +422,7 @@ React se ha configurado para generar mensajes de error bastante claros. A pesar 
 
 **La consola siempre debe estar abierta**. Si el navegador reporta errores, no es recomendable seguir escribiendo más código, esperando milagros. En su lugar, debes intentar comprender la causa del error y, por ejemplo, volver al estado funcional anterior:
 
-![](../../images/1/2a.png)
+![Captura de pantalla de error de prop: undefined](../../images/1/2a.png)
 
 Es bueno recordar que en React es posible y vale la pena escribir comandos <em>console.log()</em> (que se imprimen en la consola) dentro de tu código.
 
@@ -585,6 +583,7 @@ y la edad
 ```js
 {friends[0].age}
 ```
+
 Después de corregir el error, tu deberías limpiar los mensajes de la consola presionando el botón 🚫 y luego recargando el contenido de la página, y asegurarte de que no se están mostrando mensajes de error.
 
 Una pequeña nota adicional a la anterior. React también permite renderizar arreglos <i>si</i> el arreglo contiene valores que son elegibles para renderizar (como números y cadenas). Así que el siguiente programa funcionaría, aunque el resultado no ser el que queremos:
@@ -629,11 +628,11 @@ part2
   countries
 ```
 
-Mira este [repositorio de ejemplo para el envio de ejercicios](https://github.com/fullstack-hy2020/example-submission-repository)! 
+Mira este [repositorio de ejemplo para el envío de ejercicios](https://github.com/fullstack-hy2020/example-submission-repository)! 
 
 Para cada parte del curso hay un directorio, que se ramifica en directorios que contienen una serie de ejercicios, como "unicafe" para la parte 1.
 
-La mayoría de los ejercicios del curso construyen una aplicación más grande, por ejemplo: courseinfo, unicafe y anecdotes en esta parte, poco a poco. Es suficiente con enviar la aplicación terminada. Puedes hacer un commit después de cada ejercicio, pero no es obligatorio. Por ejemplo, la aplicación de información del curso se construye en los ejercicios 1.1.-1.5. En este caso solo necesitas enviarel resultado final del ejercicio 1.5.
+La mayoría de los ejercicios del curso construyen una aplicación más grande, por ejemplo: courseinfo, unicafe y anecdotes en esta parte, poco a poco. Es suficiente con enviar la aplicación terminada. Puedes hacer un commit después de cada ejercicio, pero no es obligatorio. Por ejemplo, la aplicación de información del curso se construye en los ejercicios 1.1.-1.5. En este caso solo necesitas enviar el resultado final del ejercicio 1.5.
 
 Por cada aplicación web para una serie de ejercicios, se recomienda enviar todos los archivos relacionados con esa aplicación, excepto para el directorio <i>node\_modules</i>.
 
@@ -650,7 +649,8 @@ import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)
 ```
-y <i>App.jsx</i> para que conincida con lo siguiente
+
+y <i>App.jsx</i> para que coincida con lo siguiente
 
 ```js
 const App = () => {
@@ -704,7 +704,7 @@ const App = () => {
 }
 ```
 
-**ADVERTENCIA** No trates de programar todos los componentes de corrido, porque esto podría ciertamente romper toda la aplicación. Procede en pequeños pasos, pprimero haz por ejemplo: el componente <i>Header</i> y solo cuando confirmes que funciona, podrás continuar con el siguiente componente.
+**ADVERTENCIA** No trates de programar todos los componentes de corrido, porque esto podría ciertamente romper toda la aplicación. Procede en pequeños pasos, primero haz por ejemplo: el componente <i>Header</i> y solo cuando confirmes que funciona, podrás continuar con el siguiente componente.
 
 El progreso cuidadoso y en pequeños pasos puede parecer lento, pero en realidad es <i>con diferencia la forma más rápida</i> de progresar. El famoso desarrollador de software Robert "Uncle Bob" Martin ha declarado
 
@@ -714,7 +714,7 @@ es decir, según Martin, avanzar con cuidado y con pequeños pasos es incluso la
 
 <h4>1.2: información del curso, paso 2</h4>
 
-Refactoriza el componente <i>Content</i> para que no renderice ningún nombre de partes o su número de ejercicios por sí mismo. En su lugar, solo representa tres componentes <i>Part</i> de los cuales cada uno representa el nombre y el número de ejercicios de una parte.
+Refactoriza el componente <i>Content</i> para que no muestre ningún nombre de partes o su número de ejercicios por sí mismo. En su lugar, solo representa tres componentes <i>Part</i> de los cuales cada uno representa el nombre y el número de ejercicios de una parte.
 
 ```js
 const Content = ... {
